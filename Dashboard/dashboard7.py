@@ -37,7 +37,7 @@ def sidebar(df):
     max_date = df["datetime"].max()
 
     with st.sidebar:
-        st.image("logo21.gif", caption="Eksplorasi Pembagian Sepeda", use_column_width=True)
+        st.image("https://github.com/user-attachments/assets/8227dbaa-6bbf-4c22-aa20-7da3bf874ca1", caption="Eksplorasi Pembagian Sepeda", use_column_width=True)
         st.title("Filter Data")
         st.markdown("**Pilih rentang tanggal untuk mengeksplorasi data peminjaman sepeda.**")
         date = st.date_input(
