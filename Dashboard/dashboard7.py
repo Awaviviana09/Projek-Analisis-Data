@@ -19,7 +19,7 @@ def create_comparison_chart(df, attribute1, attribute2, title):
         hover_data=[attribute1, 'count'],
         title=title,
         labels={attribute1: attribute1.capitalize(), attribute2: attribute2.capitalize(), 'count': 'Jumlah Sewa'},
-        template="plotly_dark",  # Menggunakan template plotly yang lebih modern
+        template="plotly_dark",
         height=500
     )
     fig.update_layout(
@@ -32,7 +32,7 @@ def create_comparison_chart(df, attribute1, attribute2, title):
 
 # Fungsi untuk menampilkan sidebar dengan informasi tambahan
 def sidebar(df):
-    df["datetime"] = pd.to_datetime(df["datetime"])  # Pastikan kolom datetime adalah tipe datetime
+    df["datetime"] = pd.to_datetime(df["datetime"])
     min_date = df["datetime"].min()
     max_date = df["datetime"].max()
 
@@ -62,12 +62,27 @@ if __name__ == "__main__":
     Di sini, Anda dapat mengeksplorasi wawasan utama tentang pola penggunaan sepeda seiring waktu.
     Anda dapat memfilter data dengan memilih rentang tanggal yang berbeda dan menganalisis berbagai tren peminjaman sepeda.
     """)
-    
-    # Memanggil file days_clean.csv
-    days_df_csv = Path(__file__).parent / 'days_clean.csv'
-    days_df = pd.read_csv(days_df_csv)
 
-    date = sidebar(days_df)
+    # Menggunakan jalur relatif untuk memuat file CSV
+    days_df_csv = Path(__file__).parent / 'days_clean.csv'
+    if not days_df_csv.exists():
+        st.error("File 'days_clean.csv' tidak ditemukan. Pastikan file tersebut ada di direktori yang sama dengan skrip.")
+    else:
+        days_df = pd.read_csv(days_df_csv)
+
+        date = sidebar(days_df)
+
+        # Menangani kasus jika hanya satu tanggal yang dipilih
+        if len(date) == 2:
+            selected_date_range = (pd.to_datetime(date[0]), pd.to_datetime(date[1]))
+        else:
+            selected_date_range = (pd.to_datetime(date[0]), pd.to_datetime(date[0]))
+
+        # Filter berdasarkan rentang tanggal
+        main_df = days_df[(days_df["datetime"] >= selected_date_range[0]) & (days_df["datetime"] <= selected_date_range[1])]
+
+        # Lanjutkan ke bagian visualisasi seperti sebelumnya...
+
 
     # Menangani kasus jika hanya satu tanggal yang dipilih
     if len(date) == 2:
@@ -151,5 +166,3 @@ if __name__ == "__main__":
     
     © {year_copyright} Zahwa Genoveva | Dashboard dibuat dengan ❤️ menggunakan Streamlit.
     """)
-
-
