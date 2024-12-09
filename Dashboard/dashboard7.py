@@ -64,7 +64,7 @@ if __name__ == "__main__":
     """)
     
     # Memanggil file days_clean.csv
-    days_df_csv = Path(__file__).parents[1] / 'D:\\ZAHWA\\Dicoding Project\\data analisis\\days_clean.csv'
+    days_df_csv = Path(__file__).parent / 'days_clean.csv'
     days_df = pd.read_csv(days_df_csv)
 
     date = sidebar(days_df)
