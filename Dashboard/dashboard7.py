@@ -107,7 +107,7 @@ if __name__ == "__main__":
     st.markdown("<h2 style='text-align: center;'>🎯 Eksplorasi Data Peminjaman</h2>", unsafe_allow_html=True)
     st.markdown("<div style='text-align: center;'><i class='fas fa-cloud-upload-alt'></i></div>", unsafe_allow_html=True)
     st.markdown("""
-    **Pilih file CSV yang ingin Anda eksplorasi:**
+    **Inputkan file CSV untuk menampilkan Dataframe (Dashboard):**
     """, unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Pilih file CSV", type=["csv"])
