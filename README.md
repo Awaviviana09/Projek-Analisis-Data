@@ -1,6 +1,10 @@
 # 🚲 Bike Sharing Data Analysis
 Projek Akhir Analisis Data dengan Python Dicoding
 ![image](https://github.com/user-attachments/assets/56db51a0-3beb-4d53-a64d-60ab0f94301a)
+![image](https://github.com/user-attachments/assets/5b2123fa-fd85-483a-b2d9-284290fb1972)
+![image](https://github.com/user-attachments/assets/1dc86f29-3f07-414e-ae11-af732246bcd6)
+![image](https://github.com/user-attachments/assets/37b332d5-d20e-4f6e-8677-3ab231ce30e3)
+
 
 
 ## 📌 Overview
