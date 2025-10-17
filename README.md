@@ -1,5 +1,12 @@
-# 🚲 Bike Sharing Data Analysis
-Projek Akhir Analisis Data dengan Python Dicoding
+<h1 align="center">🚲 Bike Sharing Data Analysis</h1>
+
+<p align="center">
+  <b>Final Project – Analisis Data dengan Python (Dicoding)</b><br>
+  <i>Exploring user behavior, demand trends, and environmental impacts on bike rentals</i>
+</p>
+
+---
+
 ![image](https://github.com/user-attachments/assets/56db51a0-3beb-4d53-a64d-60ab0f94301a)
 ![image](https://github.com/user-attachments/assets/5b2123fa-fd85-483a-b2d9-284290fb1972)
 ![image](https://github.com/user-attachments/assets/1dc86f29-3f07-414e-ae11-af732246bcd6)
@@ -12,24 +19,35 @@ This project analyzes the **Bike Sharing Dataset**, uncovering insights into use
 
 🔗 **Live Demo**: [Streamlit App](https://5yzypzszuhjrunsucyxgbz.streamlit.app/)
 
-## 📊 Dataset
-The dataset includes:
-- **Datetime**: Timestamp of rental
-- **Season**: Categorical (Winter, Spring, Summer, Fall)
-- **Weather**: Categorical (Clear, Mist, Light Rain, Heavy Rain)
-- **Temperature**: Normalized temperature
-- **Humidity**: Normalized humidity level
-- **Wind Speed**: Normalized wind speed
-- **Casual Users**: Number of casual (non-registered) users
-- **Registered Users**: Number of registered users
-- **Total Users**: Total bike rentals
+---
+
+## 📊 Dataset Description
+The dataset contains information about daily bike rental counts and related environmental factors.  
+
+| Feature | Description |
+|----------|-------------|
+| `Datetime` | Timestamp of bike rental |
+| `Season` | Season category (Winter, Spring, Summer, Fall) |
+| `Weather` | Weather condition (Clear, Mist, Light Rain, Heavy Rain) |
+| `Temperature` | Normalized temperature value |
+| `Humidity` | Normalized humidity level |
+| `Wind Speed` | Normalized wind speed |
+| `Casual Users` | Number of unregistered (casual) users |
+| `Registered Users` | Number of registered users |
+| `Total Users` | Total number of bike rentals |
+
+---
 
 ## 🛠 Technologies Used
-- **Python** (Data Processing & Visualization)
-- **Pandas, NumPy** (Data Handling)
-- **Matplotlib, Seaborn** (Data Visualization)
-- **Google Colab** (Data Analysis & Model Training)
-- **Streamlit** (Interactive Web Dashboard)
+| Category | Tools / Libraries |
+|-----------|-------------------|
+| **Programming Language** | Python |
+| **Data Processing** | Pandas, NumPy |
+| **Visualization** | Matplotlib, Seaborn |
+| **Notebook Environment** | Google Colab |
+| **Dashboard Development** | Streamlit |
+
+---
 
 ## 🚀 Getting Started
 ### 1️⃣ Clone the Repository
@@ -38,7 +56,7 @@ git clone https://github.com/your-username/bike-sharing-analysis.git
 cd bike-sharing-analysis
 ```
 
-## Setup Environment - Shell/Terminal
+## 2️⃣ Setup Environment - Shell/Terminal
 ```
 python -m venv myenv
 myenv\Scripts\activate
@@ -46,7 +64,7 @@ pip install -r requirements.txt
 pip install numpy pandas scipy matplotlib seaborn jupyter streamlit
 ```
 
-## Run steamlit app
+## 3️⃣ Run steamlit app
 ```
 streamlit run dashboard7.py
 ```
